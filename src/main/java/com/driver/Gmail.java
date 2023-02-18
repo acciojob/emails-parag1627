@@ -1,5 +1,5 @@
 
-
+//
 //package com.driver;
 //
 //import java.util.ArrayList;
@@ -82,7 +82,7 @@
 //        // Return the maximum number of mails that can be stored in the inbox
 //    }
 //}
-
+//
 
 
 package com.driver;
@@ -92,9 +92,12 @@ import java.util.Date;
 
 public class Gmail extends Email {
 
-    private int inboxCapacity;
-    private ArrayList<Mail> inbox;
-    private ArrayList<Mail> trash;
+     int inboxCapacity;
+    //maximum number of mails inbox can store
+    //    //Inbox: Stores mails. Each mail has date (Date), sender (String), message (String). It is guaranteed that message is distinct for all mails.
+//    //Trash: Stores mails. Each mail has date (Date), sender (String), message (String)
+     ArrayList<Mail> inbox;
+     ArrayList<Mail> trash;
 
     public Gmail(String emailId, int inboxCapacity) {
         super(emailId);
@@ -110,7 +113,7 @@ public class Gmail extends Email {
             inbox.remove(0);
             trash.add(oldestMail);
         }
-        // add the new mail to inbox
+
         inbox.add(new Mail(date, sender, message));
     }
 
